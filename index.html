@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منيو صالون أسرار الجمال</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #121212;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 10px;
+            color: #ffffff;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+            width: 100%;
+            max-width: 600px;
+        }
+        .logo-container {
+            width: 100%;
+            max-width: 180px;
+            margin: 0 auto 15px auto;
+        }
+        .logo-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+        .header h1 {
+            color: #d4af37;
+            font-size: 26px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .header p {
+            color: #cccccc;
+            font-size: 14px;
+        }
+        .menu-container {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .menu-page {
+            background: #1e1e1e;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+            border: 1px solid #d4af37;
+            cursor: pointer;
+        }
+        .menu-page img {
+            width: 100%;
+            height: auto;
+            display: block;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+
+        /* نافذة التكبير عند الضغط */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.92);
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        .modal img {
+            max-width: 100%;
+            max-height: 95vh;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(212,175,55,0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo-container">
+            <img src="https://i.postimg.cc/9QdvbZXH/Messenger-creation-FB754A96-1288-4B98-B3FE-C7648EF6B6DD.jpg" alt="شعار صالون أسرار الجمال" class="logo-img">
+        </div>
+        <h1>صالون أسرار الجمال</h1>
+        <p>انقر على أي صفحة لتكبيرها وقراءتها بوضوح تام</p>
+    </div>
+
+    <div class="menu-container">
+        <!-- الصفحة 1 (WA0031) -->
+        <div class="menu-page" onclick="zoomImage(this)">
+            <img src="https://i.ibb.co/fGpSsYJw/IMG-20260813-WA0031.jpg" alt="صفحة 1">
+        </div>
+
+        <!-- الصفحة 2 (WA0032) -->
+        <div class="menu-page" onclick="zoomImage(this)">
+            <img src="https://i.ibb.co/xq9vZtPm/IMG-20260813-WA0032.jpg" alt="صفحة 2">
+        </div>
+
+        <!-- الصفحة 3 (WA0033) -->
+        <div class="menu-page" onclick="zoomImage(this)">
+            <img src="https://i.ibb.co/hFZyzDFy/IMG-20260813-WA0033.jpg" alt="صفحة 3">
+        </div>
+
+        <!-- الصفحة 4 (WA0034) -->
+        <div class="menu-page" onclick="zoomImage(this)">
+            <img src="https://i.ibb.co/5xTdXVCB/IMG-20260813-WA0034.jpg" alt="صفحة 4">
+        </div>
+
+        <!-- الصفحة 5 (WA0035) -->
+        <div class="menu-page" onclick="zoomImage(this)">
+            <img src="https://i.ibb.co/G4MbSwbc/IMG-20260813-WA0035.jpg" alt="صفحة 5">
+        </div>
+
+        <!-- الصفحة 6 (WA0036) -->
+        <div class="menu-page" onclick="zoomImage(this)">
+            <img src="https://i.ibb.co/MxF1T784/IMG-20260813-WA0036.jpg" alt="صفحة 6">
+        </div>
+
+        <!-- الصفحة 7 (WA0037) -->
+        <div class="menu-page" onclick="zoomImage(this)">
+            <img src="https://i.ibb.co/6RF3vTJX/IMG-20260813-WA0037.jpg" alt="صفحة 7">
+        </div>
+
+        <!-- الصفحة 8 (WA0038) -->
+        <div class="menu-page" onclick="zoomImage(this)">
+            <img src="https://i.ibb.co/4C8Zb2d/IMG-20260813-WA0038.jpg" alt="صفحة 8">
+        </div>
+
+        <!-- الصفحة 9 (WA0039) -->
+        <div class="menu-page" onclick="zoomImage(this)">
+            <img src="https://i.ibb.co/ktTcg42/IMG-20260813-WA0039.jpg" alt="صفحة 9">
+        </div>
+
+        <!-- الصفحة 10 (WA0040) -->
+        <div class="menu-page" onclick="zoomImage(this)">
+            <img src="https://i.ibb.co/67DPsgp1/IMG-20260813-WA0040.jpg" alt="صفحة 10">
+        </div>
+
+        <!-- الصفحة 11 (WA0041) -->
+        <div class="menu-page" onclick="zoomImage(this)">
+            <img src="https://i.ibb.co/sv3dk8Bc/IMG-20260813-WA0041.jpg" alt="صفحة 11">
+        </div>
+
+        <!-- الصفحة 12 (WA0042) -->
+        <div class="menu-page" onclick="zoomImage(this)">
+            <img src="https://i.ibb.co/HpGnctWZ/IMG-20260813-WA0042.jpg" alt="صفحة 12">
+        </div>
+
+        <!-- الصفحة 13 (WA0043) -->
+        <div class="menu-page" onclick="zoomImage(this)">
+            <img src="https://i.ibb.co/FLCM1bHQ/IMG-20260813-WA0043.jpg" alt="صفحة 13">
+        </div>
+
+        <!-- الصفحة 14 (WA0044) -->
+        <div class="menu-page" onclick="zoomImage(this)">
+            <img src="https://i.ibb.co/Hf6B3HxB/IMG-20260813-WA0044.jpg" alt="صفحة 14">
+        </div>
+
+        <!-- الصفحة 15 (WA0045) -->
+        <div class="menu-page" onclick="zoomImage(this)">
+            <img src="https://i.ibb.co/BK6VsnkP/IMG-20260813-WA0045.jpg" alt="صفحة 15">
+        </div>
+
+        <!-- الصفحة 16 (WA0046) -->
+        <div class="menu-page" onclick="zoomImage(this)">
+            <img src="https://i.ibb.co/5h8h5MSj/IMG-20260813-WA0046.jpg" alt="صفحة 16">
+        </div>
+
+        <!-- الصفحة 17 (WA0047) -->
+        <div class="menu-page" onclick="zoomImage(this)">
+            <img src="https://i.ibb.co/2pTm08F/IMG-20260813-WA0047.jpg" alt="صفحة 17">
+        </div>
+
+        <!-- الصفحة 18 (WA0048) -->
+        <div class="menu-page" onclick="zoomImage(this)">
+            <img src="https://i.ibb.co/k6xvyKN6/IMG-20260813-WA0048.jpg" alt="صفحة 18">
+        </div>
+    </div>
+
+    <!-- نافذة التكبير عند النقر -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <img id="modal-img" src="" alt="صورة مكبرة">
+    </div>
+
+    <script>
+        function zoomImage(element) {
+            var imgSrc = element.querySelector('img').src;
+            document.getElementById('modal-img').src = imgSrc;
+            document.getElementById('modal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
